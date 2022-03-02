@@ -16,6 +16,7 @@
 		DB77331127919D2000FA1878 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77331027919D2000FA1878 /* Petition.swift */; };
 		DB77331327919D6B00FA1878 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB77331227919D6B00FA1878 /* Petitions.swift */; };
 		DB7733152791A6D500FA1878 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7733142791A6D500FA1878 /* DetailViewController.swift */; };
+		DBFCEE8627CFECF90037FFE7 /* stringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFCEE8527CFECF90037FFE7 /* stringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DB77331027919D2000FA1878 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		DB77331227919D6B00FA1878 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
 		DB7733142791A6D500FA1878 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DBFCEE8527CFECF90037FFE7 /* stringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				DB7733142791A6D500FA1878 /* DetailViewController.swift */,
 				DB77331027919D2000FA1878 /* Petition.swift */,
 				DB77331227919D6B00FA1878 /* Petitions.swift */,
+				DBFCEE8527CFECF90037FFE7 /* stringExtension.swift */,
 				DB7733022791967700FA1878 /* Main.storyboard */,
 				DB7733052791967800FA1878 /* Assets.xcassets */,
 				DB7733072791967800FA1878 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFCEE8627CFECF90037FFE7 /* stringExtension.swift in Sources */,
 				DB7733012791967700FA1878 /* ViewController.swift in Sources */,
 				DB77331127919D2000FA1878 /* Petition.swift in Sources */,
 				DB7732FD2791967700FA1878 /* AppDelegate.swift in Sources */,
