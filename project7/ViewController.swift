@@ -61,7 +61,7 @@ class ViewController: UITableViewController {
     
     func filter (_ keywords: [String]) {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            self?.filteredItems.removeAll(where: {$0.title.lowercased().containsAny(of: keywords) == false && $0.body.lowercased().containsAny(of: keywords) == false})
+            self?.filteredItems.removeAll(where: {$0.title.lowercased().containsNot(array: keywords) && $0.body.lowercased().containsNot(array: keywords)})
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
             }

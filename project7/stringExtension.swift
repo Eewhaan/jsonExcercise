@@ -14,9 +14,9 @@ extension String {
 }
 
 extension String {
-    func containsAny(of array: [String]) -> Bool {
+    func containsNot(array: [String]) -> Bool {
         for item in array {
-            if self.contains(item) {
+            if !self.contains(item) {
                 return true
             }
         }
