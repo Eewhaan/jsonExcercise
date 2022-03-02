@@ -45,27 +45,27 @@ class ViewController: UITableViewController {
     }
     
     @objc func filterItems () {
-        let ac = UIAlertController(title: "Filter by keyword", message: "Enter keyword to search through data", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Filter by keywords", message: "Enter keywords to search through data", preferredStyle: .alert)
         ac.addTextField()
         
         let submitKeyword = UIAlertAction(title: "Submit", style: .default) {
             [weak self, weak ac] _ in
-            guard let keyword = ac?.textFields?[0].text else {return}
-            self?.filter(keyword)
+            guard let stringOfKeywords = ac?.textFields?[0].text else {return}
+            let keywords = stringOfKeywords.lowercased().stringToArray()
+            self?.filter(keywords)
         }
         ac.addAction(submitKeyword)
         present (ac, animated: true)
         filteredItems = petitions
     }
     
-    func filter (_ keyword: String) {
+    func filter (_ keywords: [String]) {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            self?.filteredItems.removeAll(where: {!$0.title.lowercased().contains(keyword.lowercased()) && !$0.body.lowercased().contains(keyword.lowercased())})
+            self?.filteredItems.removeAll(where: {$0.title.lowercased().containsAny(of: keywords) == false && $0.body.lowercased().containsAny(of: keywords) == false})
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
             }
         }
- 
     }
     
     @objc func showCredits () {
